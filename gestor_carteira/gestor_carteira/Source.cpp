@@ -44,9 +44,9 @@ void main()
 			case 5: opcao5(); break;
 			menu();
 			cin >> opcao_escolhida;
-		};
-	};
-};
+		}
+	}
+}
 
 
 
