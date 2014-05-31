@@ -12,7 +12,7 @@ void main()
 	{
 		char tipo;
 		int valor;
-		struct data;
+		struct data data1;
 	};
 	int opcao_escolhida;
 	carteira v[9999];
@@ -41,11 +41,11 @@ void main()
 			{
 				printf("\n Insira, a data de hoje: ");
 				printf("\n Dia:");
-				scanf_s("%d", &v[posicao_vector].data.dia);
+				scanf_s("%d", &v[posicao_vector].data1.dia);
 				printf("\n Mês:");
-				scanf_s("%d", &v[posicao_vector].data.mes);
+				scanf_s("%d", &v[posicao_vector].data1.mes);
 				printf("\n Ano:");
-				scanf_s("%d", &v[posicao_vector].data.ano);
+				scanf_s("%d", &v[posicao_vector].data1.ano);
 			}
 		}
 	}
