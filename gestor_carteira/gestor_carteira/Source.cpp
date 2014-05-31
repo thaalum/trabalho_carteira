@@ -34,40 +34,20 @@ void main()
 	{
 	case '1':
 	{
-				printf("Despesa (d) ou receita (r)? \n");
-				scanf_s("%c", &v[posicao_vector].tipo);
-				switch (v[posicao_vector].tipo)
-				{
-				case 'd':
-					printf("\n Insira, a data de hoje: ");
-					printf("\n Dia:");
-					scanf_s("%d", &v[posicao_vector].data1.dia);
-					printf("\n Mês:");
-					scanf_s("%d", &v[posicao_vector].data1.mes);
-					printf("\n Ano:");
-					scanf_s("%d", &v[posicao_vector].data1.ano);
-				}
-				//	if (v[posicao_vector].tipo == 'd')
-				//{
-				//	printf("\n Insira, a data de hoje: ");
-				//	printf("\n Dia:");
-				//	scanf_s("%d", &v[posicao_vector].data1.dia);
-				//	printf("\n Mês:");
-				//	scanf_s("%d", &v[posicao_vector].data1.mes);
-				//printf("\n Ano:");
-				//scanf_s("%d", &v[posicao_vector].data1.ano);
-				//};
-				//if (v[posicao_vector].tipo == 'r')
-				//{
-				//	printf("\n Insira, a data de hoje: ");
-				//	printf("\n Dia:");
-				//	scanf_s("%d", &v[posicao_vector].data1.dia);
-				//	printf("\n Mês:");
-				//	scanf_s("%d", &v[posicao_vector].data1.mes);
-				//	printf("\n Ano:");
-				//	scanf_s("%d", &v[posicao_vector].data1.ano);
-				//};
-	}
+			printf_s("Despesa (d) ou receita (r)? \n");
+			scanf_s("%c", &v[posicao_vector].tipo);
+			switch (v[posicao_vector].tipo)
+			{
+			case 'd':
+				printf("\n Insira, a data de hoje: ");
+				printf("\n Dia:");
+				scanf_s("%d", &v[posicao_vector].data1.dia);
+				printf("\n Mês:");
+				scanf_s("%d", &v[posicao_vector].data1.mes);
+				printf("\n Ano:");
+				scanf_s("%d", &v[posicao_vector].data1.ano);
+			}
+		}
 
 	}
 
