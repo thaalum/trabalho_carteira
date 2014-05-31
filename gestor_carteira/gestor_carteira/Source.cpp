@@ -1,6 +1,4 @@
 #include <stdio.h>
-teste ricardo
-
 void main()
 {
 	struct data
