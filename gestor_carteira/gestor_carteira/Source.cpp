@@ -32,9 +32,9 @@ void main()
 	scanf_s("%d", &opcao_escolhida);
 	switch (opcao_escolhida)
 	{
-	case '1':
-	{
-			printf_s("Despesa (d) ou receita (r)? \n");
+		case 1:
+		{
+			printf("Despesa (d) ou receita (r): \n");
 			scanf_s("%c", &v[posicao_vector].tipo);
 			switch (v[posicao_vector].tipo)
 			{
@@ -42,13 +42,14 @@ void main()
 				printf("\n Insira, a data de hoje: ");
 				printf("\n Dia:");
 				scanf_s("%d", &v[posicao_vector].data1.dia);
-				printf("\n Mês:");
+				printf("\n Mes:");
 				scanf_s("%d", &v[posicao_vector].data1.mes);
 				printf("\n Ano:");
 				scanf_s("%d", &v[posicao_vector].data1.ano);
 			}
 		}
 
+	}
 	}
 
 }
