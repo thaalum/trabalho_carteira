@@ -33,25 +33,35 @@ void main()
 	cout << "12 - SAIR\n";
 	cout << "ESCOLHA UMA OPCAO: ";
 	cin >> opcao_escolhida;
-	switch (opcao_escolhida)
+	while (opcao_escolhida != 12)
 	{
-		case 1:
+		switch (opcao_escolhida)
 		{
-			cout << "Despesa d ou receita r: \n";
-			cin >>  v[posicao_vector].tipo;
-			
-			
-			
-			cout << "\n Insira, a data de hoje: ";
-			cout << "\n Dia:";
-			cin >>  v[posicao_vector].data1.dia;
-			cout << "\n Mes:";
-			cin >> v[posicao_vector].data1.mes;
-			cout << "\n Ano:";
-			cin >>  v[posicao_vector].data1.ano;
+			case 1:
+				cout << "Despesa d ou receita r: \n";
+				cin >>  v[posicao_vector].tipo;
+				cout << "Valor:";
+				cin >> v[posicao_vector].valor;
+				cout << "\n Insira, a data de hoje: ";
+				cout << "\n Dia:";
+				cin >>  v[posicao_vector].data1.dia;
+				cout << "\n Mes:";
+				cin >> v[posicao_vector].data1.mes;
+				cout << "\n Ano:";
+				cin >>  v[posicao_vector].data1.ano;
+				posicao_vector++;
+				break;
+			case 2:
+				int i;
+				for (i = 0; i <= posicao_vector; i++)
+				{
+					if (v[i].tipo == 'd')
+						cout << "Registo:"<< i<< "\n Quantia:"<< v[i].valor<< "Data:"<< v[i].data1.dia,  v[i].data1.mes,  v[i].data1.ano;
+				};
+				break;
 		}
-	}
 
+	}
 }
 	
 
