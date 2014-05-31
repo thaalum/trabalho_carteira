@@ -45,7 +45,7 @@ void main()
 			case 1: system("cls"); opcao1(); break;
 			case 2: system("cls"); opcao2(); break;
 			case 3: system("cls"); opcao3(); break;
-			case 4: system("cls"); opcao4(); break;
+			//case 4: system("cls"); opcao4(); break;
 			case 5: system("cls"); opcao5(); break;
 			case 6: system("cls"); opcao6(); break;
 			case 7: system("cls"); opcao7(); break;
@@ -53,7 +53,7 @@ void main()
 			case 9: system("cls"); opcao9(); break;
 			case 10: system("cls"); opcao10(); break;
 			case 11: system("cls"); opcao11(); break;
-			case 12: system("cls"); opcao12(); break;
+			//case 12: system("cls"); opcao12(); break;
 		}
 		system("cls");
 		menu();
@@ -271,4 +271,3 @@ void opcao11()
 	}
 	system("pause");
 }
-
