@@ -68,7 +68,7 @@ void menu()
 	cout << "11 - RECEITAS ACIMA DE:\n";
 	cout << "12 - SAIR\n";
 	cout << "ESCOLHA UMA OPCAO: ";
-};
+}
 
 void opcao1()
 {
@@ -84,7 +84,7 @@ void opcao1()
 	cout << "\n Ano:";
 	cin >> v[posicao_vector].data1.ano;
 	posicao_vector++;
-};
+}
 
 void opcao2()
 {
@@ -93,8 +93,8 @@ void opcao2()
 	{
 		if (v[i].tipo == 'd')
 			cout << "Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
-	};
-};
+	}
+}
 
 void opcao3()
 {
@@ -103,8 +103,8 @@ void opcao3()
 	{
 		if (v[i].tipo == 'r')
 			cout << "Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
-	};
-};
+	}
+}
 
 void opcao5()
 {
@@ -120,4 +120,4 @@ void opcao5()
 		}
 		cout << "Media de despesas:" << media / cont;
 	}
-};
+}
