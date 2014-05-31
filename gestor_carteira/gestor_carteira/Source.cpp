@@ -10,7 +10,7 @@ void main()
 	struct carteira
 	{
 		char tipo;
-		int valor;
+		float valor;
 		struct data data1;
 	};
 	int opcao_escolhida;
@@ -36,20 +36,19 @@ void main()
 		{
 			printf("Despesa (d) ou receita (r): \n");
 			scanf_s("%c", &v[posicao_vector].tipo);
-			switch (v[posicao_vector].tipo)
-			{
-			case 'd':
-				printf("\n Insira, a data de hoje: ");
-				printf("\n Dia:");
-				scanf_s("%d", &v[posicao_vector].data1.dia);
-				printf("\n Mes:");
-				scanf_s("%d", &v[posicao_vector].data1.mes);
-				printf("\n Ano:");
-				scanf_s("%d", &v[posicao_vector].data1.ano);
-			}
+			
+			
+			
+			printf("\n Insira, a data de hoje: ");
+			printf("\n Dia:");
+			scanf_s("%d", &v[posicao_vector].data1.dia);
+			printf("\n Mes:");
+			scanf_s("%d", &v[posicao_vector].data1.mes);
+			printf("\n Ano:");
+			scanf_s("%d", &v[posicao_vector].data1.ano);
 		}
-
-	}
 	}
 
 }
+	
+
