@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <iostream>
+using namespace std;
+
 void main()
 {
 	struct data
@@ -16,36 +19,36 @@ void main()
 	int opcao_escolhida;
 	carteira v[9999];
 	int posicao_vector = 0;
-	printf("1 - INSERIR REGISTO NOVO\n");
-	printf("2 - LISTAR DESPESAS\n");
-	printf("3 - LISTAR RECEITAS\n");
-	printf("4 - EDITAR REGISTO\n");
-	printf("5 - APRESENTAR MEDIA DE DESPESAS\n");
-	printf("6 - APRESENTAR MEDIA DE RECEITAS\n");
-	printf("7 - APRESENTAR SALDO ACTUAL\n");
-	printf("8 - DESPESAS POR DATA\n");
-	printf("9 - RECEITAS POR DATA\n");
-	printf("10 - DESPESAS ACIMA DE:\n");
-	printf("11 - RECEITAS ACIMA DE:\n");
-	printf("12 - SAIR\n");
-	printf("ESCOLHA UMA OPCAO: ");
-	scanf_s("%d", &opcao_escolhida);
+	cout << "1 - INSERIR REGISTO NOVO\n";
+	cout << "2 - LISTAR DESPESAS\n";
+	cout << "3 - LISTAR RECEITAS\n";
+	cout << "4 - EDITAR REGISTO\n";
+	cout << "5 - APRESENTAR MEDIA DE DESPESAS\n";
+	cout << "6 - APRESENTAR MEDIA DE RECEITAS\n";
+	cout << "7 - APRESENTAR SALDO ACTUAL\n";
+	cout << "8 - DESPESAS POR DATA\n";
+	cout << "9 - RECEITAS POR DATA\n";
+	cout << "10 - DESPESAS ACIMA DE:\n";
+	cout << "11 - RECEITAS ACIMA DE:\n";
+	cout << "12 - SAIR\n";
+	cout << "ESCOLHA UMA OPCAO: ";
+	cin >> opcao_escolhida;
 	switch (opcao_escolhida)
 	{
 		case 1:
 		{
-			printf("Despesa (d) ou receita (r): \n");
-			scanf_s("%c", &v[posicao_vector].tipo);
+			cout << "Despesa d ou receita r: \n";
+			cin >>  v[posicao_vector].tipo;
 			
 			
 			
-			printf("\n Insira, a data de hoje: ");
-			printf("\n Dia:");
-			scanf_s("%d", &v[posicao_vector].data1.dia);
-			printf("\n Mes:");
-			scanf_s("%d", &v[posicao_vector].data1.mes);
-			printf("\n Ano:");
-			scanf_s("%d", &v[posicao_vector].data1.ano);
+			cout << "\n Insira, a data de hoje: ";
+			cout << "\n Dia:";
+			cin >>  v[posicao_vector].data1.dia;
+			cout << "\n Mes:";
+			cin >> v[posicao_vector].data1.mes;
+			cout << "\n Ano:";
+			cin >>  v[posicao_vector].data1.ano;
 		}
 	}
 
