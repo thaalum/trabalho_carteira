@@ -1,4 +1,7 @@
+//falta opção 12
+
 #include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 using namespace std;
 struct data
@@ -32,26 +35,31 @@ void opcao12();
 void main()
 {
 	int opcao_escolhida;
+	system("cls");
 	menu();
 	cin >> opcao_escolhida;
 	while (opcao_escolhida != 12)
 	{
 		switch (opcao_escolhida)
 		{
-			case 1: opcao1(); break;
-			case 2: opcao2(); break;
-			case 3: opcao3(); break;
-			case 5: opcao5(); break;
-			menu();
-			cin >> opcao_escolhida;
+			case 1: system("cls"); opcao1(); break;
+			case 2: system("cls"); opcao2(); break;
+			case 3: system("cls"); opcao3(); break;
+			case 4: system("cls"); opcao4(); break;
+			case 5: system("cls"); opcao5(); break;
+			case 6: system("cls"); opcao6(); break;
+			case 7: system("cls"); opcao7(); break;
+			case 8: system("cls"); opcao8(); break;
+			case 9: system("cls"); opcao9(); break;
+			case 10: system("cls"); opcao10(); break;
+			case 11: system("cls"); opcao11(); break;
+			case 12: system("cls"); opcao12(); break;
 		}
+		system("cls");
+		menu();
+		cin >> opcao_escolhida;
 	}
 }
-
-
-
-
-
 
 void menu()
 {
@@ -94,6 +102,7 @@ void opcao2()
 		if (v[i].tipo == 'd')
 			cout << "Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
 	}
+	system("pause");
 }
 
 void opcao3()
@@ -104,13 +113,14 @@ void opcao3()
 		if (v[i].tipo == 'r')
 			cout << "Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
 	}
+	system("pause");
 }
 
 void opcao5()
 {
 	int i;
 	float media = 0;
-	int cont;
+	int cont=0;
 	for (i = 0; i <= posicao_vector; i++)
 	{
 		if (v[i].tipo == 'd')
@@ -118,6 +128,147 @@ void opcao5()
 			media = media + v[i].valor;
 			cont++;
 		}
-		cout << "Media de despesas:" << media / cont;
 	}
+	cout << "Media de despesas:" << media / cont<<"\n";
+	system("pause");
 }
+
+void opcao6()
+{
+	int i;
+	float media = 0;
+	int cont = 0;
+	for (i = 0; i <= posicao_vector; i++)
+	{
+		if (v[i].tipo == 'r')
+		{
+			media = media + v[i].valor;
+			cont++;
+		}
+	}
+	cout << "Media de receitas:" << media / cont << "\n";
+	system("pause");
+}
+
+void opcao7()
+{
+		int i;
+		float total_d = 0;
+		float total_r = 0;
+		float saldo = 0;
+		for (i = 0; i <= posicao_vector; i++)
+		{
+			if (v[i].tipo == 'd')
+			{
+				total_d = total_d + v[i].valor;
+			}
+		}
+		for (i = 0; i <= posicao_vector; i++)
+		{
+			if (v[i].tipo == 'r')
+			{
+				total_r = total_r + v[i].valor;
+			}
+		}
+		cout << "Saldo: " << total_r - total_d << "\n";
+		system("pause");
+}
+
+void opcao8()
+{
+	int ano_procurar;
+	int mes_procurar;
+	int dia_procurar;
+	cout << "\nEm que data pretende procurar? ";
+	cout << "\nAno: ";
+	cin >> ano_procurar;
+	cout << "\nMes: ";
+	cin >> mes_procurar;
+	cout << "\nDia: ";
+	cin >> dia_procurar;
+	int i;
+	for (i = 0; i <= posicao_vector; i++)
+	{
+		if (v[i].data1.ano == ano_procurar)
+		{
+			if (v[i].data1.mes == mes_procurar)
+			{
+				if (v[i].data1.dia == dia_procurar)
+				{
+					if (v[i].tipo == 'd')
+					{
+						cout << "\n Numero de registo:" << i << "\n Quantia:" << v[i].valor<<"\n \n";
+					}
+				}
+			}
+		}
+	}
+	system("pause");
+}
+
+void opcao9()
+{
+	int ano_procurar;
+	int mes_procurar;
+	int dia_procurar;
+	cout << "\nEm que data pretende procurar? ";
+	cout << "\nAno: ";
+	cin >> ano_procurar;
+	cout << "\nMes: ";
+	cin >> mes_procurar;
+	cout << "\nDia: ";
+	cin >> dia_procurar;
+	int i;
+	for (i = 0; i <= posicao_vector; i++)
+	{
+		if (v[i].data1.ano == ano_procurar)
+		{
+			if (v[i].data1.mes == mes_procurar)
+			{
+				if (v[i].data1.dia == dia_procurar)
+				{
+					if (v[i].tipo == 'r')
+					{
+						cout << "\n Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n \n";
+					}
+				}
+			}
+		}
+	}
+	system("pause");
+}
+
+void opcao10()
+{
+	int valor_a_procurar;
+	cout << "\nPretende procurar despesas acima de: ";
+	cin >> valor_a_procurar;
+	int i;
+	for (i = 0; i <= posicao_vector; i++)
+	{
+		if (v[i].tipo == 'd')
+		{
+			if (v[i].valor>valor_a_procurar)
+				cout << "Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
+		}
+	}
+	system("pause");
+}
+
+void opcao11()
+{
+	int valor_a_procurar;
+	cout << "\nPretende procurar receitas acima de: ";
+	cin >> valor_a_procurar;
+	int i;
+	for (i = 0; i <= posicao_vector; i++)
+	{
+		if (v[i].tipo == 'r')
+		{
+			if (v[i].valor>valor_a_procurar)
+				cout << "Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
+		}
+	}
+	system("pause");
+}
+
