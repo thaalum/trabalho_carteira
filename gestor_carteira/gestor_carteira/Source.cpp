@@ -54,12 +54,12 @@ void main()
 			case 9: system("cls"); opcao9(); break;
 			case 10: system("cls"); opcao10(); break;
 			case 11: system("cls"); opcao11(); break;
-			//case 12: system("cls"); opcao12(); break;
 		}
 		system("cls");
 		menu();
 		cin >> opcao_escolhida;
 	}
+	cout << "\nPrograma terminado!\n";
 }
 
 void menu();
@@ -67,14 +67,14 @@ void opcao1() ////INSERIR REGISTO NOVO
 {
 	cout << "Despesa (d) ou receita (r): ";
 	cin >> v[posicao_vector].tipo;
-	cout << "Valor:";
+	cout << "Valor: ";
 	cin >> v[posicao_vector].valor;
-	cout << "\n Insira, a data de hoje: ";
-	cout << "\n Dia:";
+	cout << "\nInsira a data de hoje: \n";
+	cout << "Dia: ";
 	cin >> v[posicao_vector].data1.dia;
-	cout << "\n Mes:";
+	cout << "Mes: ";
 	cin >> v[posicao_vector].data1.mes;
-	cout << "\n Ano:";
+	cout << "Ano: ";
 	cin >> v[posicao_vector].data1.ano;
 	posicao_vector++;
 }
@@ -84,7 +84,7 @@ void opcao2() //LISTAR DESPESAS
 	for (i = 0; i <= posicao_vector; i++)
 	{
 		if (v[i].tipo == 'd')
-			cout << "Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
+			cout << "Numero de registo: " << i << "\n Quantia: " << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
 	}
 	system("pause");
 }
@@ -106,9 +106,9 @@ void opcao4() //EDITAR REGISTO //EDITAR REGISTO
 	short int ano_a_procurar;
 	int registo_a_procurar;
 	int i;
-	cout << "\n Que tipo de registo pretende editar?(r ou d)";
+	cout << "\n Que tipo de registo pretende editar?(r ou d) ";
 	cin >> tipo_a_procurar;
-	cout << "\n Em que dia foi efectuado o registo?";
+	cout << "\n Em que dia foi efectuado o registo? ";
 	cout << "\n Ano:";
 	cin >> ano_a_procurar;
 	cout << "\n Mes:";
@@ -125,7 +125,7 @@ void opcao4() //EDITAR REGISTO //EDITAR REGISTO
 				{
 					if (v[i].tipo == tipo_a_procurar)
 					{
-						cout << "\n Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
+						cout << "\n Numero de registo: " << i << "\n Quantia: " << v[i].valor << "\n Data: " << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
 					}
 				}
 			}
@@ -142,11 +142,11 @@ void opcao4() //EDITAR REGISTO //EDITAR REGISTO
 			cout << "\nValor:";
 			cin >> v[i].valor;
 			cout << "\n Insira a data: ";
-			cout << "\n Dia:";
+			cout << "Dia: ";
 			cin >> v[i].data1.dia;
-			cout << "\n Mes:";
+			cout << "Mes: ";
 			cin >> v[i].data1.mes;
-			cout << "\n Ano:";
+			cout << "Ano: ";
 			cin >> v[i].data1.ano;
 		}
 	}
