@@ -63,7 +63,7 @@ void main()
 }
 
 void menu();
-void opcao1() ////INSERIR REGISTO NOVO
+void opcao1() // INSERIR REGISTO NOVO
 {
 	cout << "Despesa (d) ou receita (r): ";
 	cin >> v[posicao_vector].tipo;
@@ -78,7 +78,7 @@ void opcao1() ////INSERIR REGISTO NOVO
 	cin >> v[posicao_vector].data1.ano;
 	posicao_vector++;
 }
-void opcao2() //LISTAR DESPESAS
+void opcao2() // LISTAR DESPESAS
 {
 	int i;
 	for (i = 0; i <= posicao_vector; i++)
@@ -88,7 +88,7 @@ void opcao2() //LISTAR DESPESAS
 	}
 	system("pause");
 }
-void opcao3() //LISTAR RECEITAS
+void opcao3() // LISTAR RECEITAS
 {
 	int i;
 	for (i = 0; i <= posicao_vector; i++)
@@ -98,7 +98,7 @@ void opcao3() //LISTAR RECEITAS
 	}
 	system("pause");
 }
-void opcao4() //EDITAR REGISTO //EDITAR REGISTO
+void opcao4() // EDITAR REGISTO
 {
 	char tipo_a_procurar;
 	short int dia_a_procurar;
@@ -152,7 +152,7 @@ void opcao4() //EDITAR REGISTO //EDITAR REGISTO
 	}
 
 }
-void opcao5() //APRESENTAR MEDIA DE DESPESAS
+void opcao5() // APRESENTAR MEDIA DE DESPESAS
 {
 	int i;
 	float media = 0;
@@ -168,7 +168,7 @@ void opcao5() //APRESENTAR MEDIA DE DESPESAS
 	cout << "Media de despesas:" << media / cont<<"\n";
 	system("pause");
 }
-void opcao6()  //APRESENTAR MEDIA DE RECEITAS
+void opcao6()  // APRESENTAR MEDIA DE RECEITAS
 {
 	int i;
 	float media = 0;
@@ -184,7 +184,7 @@ void opcao6()  //APRESENTAR MEDIA DE RECEITAS
 	cout << "Media de receitas:" << media / cont << "\n";
 	system("pause");
 }
-void opcao7()  //APRESENTAR SALDO ACTUAL
+void opcao7()  // APRESENTAR SALDO ACTUAL
 {
 		int i;
 		float total_d = 0;
@@ -207,7 +207,7 @@ void opcao7()  //APRESENTAR SALDO ACTUAL
 		cout << "Saldo: " << total_r - total_d << "\n";
 		system("pause");
 }
-void opcao8()  //DESPESAS POR DATA
+void opcao8()  // DESPESAS POR DATA
 {
 	int ano_procurar;
 	int mes_procurar;
@@ -238,7 +238,7 @@ void opcao8()  //DESPESAS POR DATA
 	}
 	system("pause");
 }
-void opcao9()  //RECEITAS POR DATA
+void opcao9()  // RECEITAS POR DATA
 {
 	int ano_procurar;
 	int mes_procurar;
