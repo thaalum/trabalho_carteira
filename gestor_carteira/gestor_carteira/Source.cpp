@@ -63,6 +63,7 @@ void main()
 		cin >> opcao_escolhida;
 	}
 	cout << "\nPrograma terminado!\n";
+	system("pause");
 }
 void menu();
 void opcao1() // INSERIR REGISTO NOVO
