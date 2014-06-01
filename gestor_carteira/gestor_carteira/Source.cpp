@@ -1,10 +1,10 @@
-//falta opção 12
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
 #include "menu.h"
 using namespace std;
+
+
 struct data
 {
 	int dia;
@@ -19,6 +19,8 @@ struct carteira
 };
 int posicao_vector = 0;
 carteira v[9999];
+
+
 void menu();
 void opcao1();
 void opcao2();
@@ -32,6 +34,7 @@ void opcao9();
 void opcao10();
 void opcao11();
 void opcao12();
+
 
 void main()
 {
@@ -61,7 +64,6 @@ void main()
 	}
 	cout << "\nPrograma terminado!\n";
 }
-
 void menu();
 void opcao1() // INSERIR REGISTO NOVO
 {
