@@ -3,7 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+<<<<<<< HEAD
 #include "menu.h"
+=======
+>>>>>>> aa90656f72270d9edf21fc4b60dbe3becd9ed184
 using namespace std;
 struct data
 {
@@ -62,7 +65,26 @@ void main()
 	}
 }
 
+<<<<<<< HEAD
 void menu();
+=======
+void menu()
+{
+	cout << "1 - INSERIR REGISTO NOVO\n";
+	cout << "2 - LISTAR DESPESAS\n";
+	cout << "3 - LISTAR RECEITAS\n";
+	cout << "4 - EDITAR REGISTO\n";
+	cout << "5 - APRESENTAR MEDIA DE DESPESAS\n";
+	cout << "6 - APRESENTAR MEDIA DE RECEITAS\n";
+	cout << "7 - APRESENTAR SALDO ACTUAL\n";
+	cout << "8 - DESPESAS POR DATA\n";
+	cout << "9 - RECEITAS POR DATA\n";
+	cout << "10 - DESPESAS ACIMA DE:\n";
+	cout << "11 - RECEITAS ACIMA DE:\n";
+	cout << "12 - SAIR\n";
+	cout << "ESCOLHA UMA OPCAO: ";
+}
+>>>>>>> aa90656f72270d9edf21fc4b60dbe3becd9ed184
 
 void opcao1()
 {
