@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-using namespace std;
 #include "menu.h"
+using namespace std;
 struct data
 {
 	int dia;
@@ -46,7 +46,7 @@ void main()
 			case 1: system("cls"); opcao1(); break;
 			case 2: system("cls"); opcao2(); break;
 			case 3: system("cls"); opcao3(); break;
-			case 4: system("cls"); opcao4(); break;
+			//case 4: system("cls"); opcao4(); break;
 			case 5: system("cls"); opcao5(); break;
 			case 6: system("cls"); opcao6(); break;
 			case 7: system("cls"); opcao7(); break;
@@ -61,8 +61,10 @@ void main()
 		cin >> opcao_escolhida;
 	}
 }
+
 void menu();
-void opcao1() //INSERIR REGISTO NOVO
+
+void opcao1()
 {
 	cout << "Despesa (d) ou receita (r): ";
 	cin >> v[posicao_vector].tipo;
@@ -77,7 +79,8 @@ void opcao1() //INSERIR REGISTO NOVO
 	cin >> v[posicao_vector].data1.ano;
 	posicao_vector++;
 }
-void opcao2()  //LISTAR DESPESAS
+
+void opcao2()
 {
 	int i;
 	for (i = 0; i <= posicao_vector; i++)
@@ -87,7 +90,8 @@ void opcao2()  //LISTAR DESPESAS
 	}
 	system("pause");
 }
-void opcao3() //LISTAR RECEITAS
+
+void opcao3()
 {
 	int i;
 	for (i = 0; i <= posicao_vector; i++)
@@ -97,61 +101,8 @@ void opcao3() //LISTAR RECEITAS
 	}
 	system("pause");
 }
-void opcao4() //EDITAR REGISTO
-{
-	char tipo_a_procurar;
-	short int dia_a_procurar;
-	short int mes_a_procurar;
-	short int ano_a_procurar;
-	int registo_a_procurar;
-	int i;
-	cout << "\n Que tipo de registo pretende editar?(r ou d)";
-	cin >> tipo_a_procurar;
-	cout << "\n Em que dia foi efectuado o registo?";
-	cout << "\n Ano:";
-	cin >> ano_a_procurar;
-	cout << "\n Mes:";
-	cin >> mes_a_procurar;
-	cout << "\n Dia:";
-	cin >> dia_a_procurar;
-	for (i = 0; i <= posicao_vector; i++)
-	{
-		if (v[i].data1.ano == ano_a_procurar)
-		{
-			if (v[i].data1.mes == mes_a_procurar)
-			{
-				if (v[i].data1.dia == dia_a_procurar)
-				{
-					if (v[i].tipo == tipo_a_procurar)
-					{
-						cout << "\n Numero de registo:" << i << "\n Quantia:" << v[i].valor << "\n Data:" << v[i].data1.dia << "  " << v[i].data1.mes << "  " << v[i].data1.ano << "\n \n";
-					}
-				}
-			}
-		}
-	}
-	cout << "\n Qual o numero do registo que pretende editar?";
-	cin >> registo_a_procurar;
-	for (i = 0; i <= posicao_vector; i++)
-	{
-		if (i == registo_a_procurar)
-		{
-			cout << "\nDespesa (d) ou receita (r): ";
-			cin >> v[i].tipo;
-			cout << "\nValor:";
-			cin >> v[i].valor;
-			cout << "\n Insira a data: ";
-			cout << "\n Dia:";
-			cin >> v[i].data1.dia;
-			cout << "\n Mes:";
-			cin >> v[i].data1.mes;
-			cout << "\n Ano:";
-			cin >> v[i].data1.ano;
-		}
-	}
 
-}
-void opcao5() //APRESENTAR MEDIA DE DESPESAS
+void opcao5()
 {
 	int i;
 	float media = 0;
@@ -167,7 +118,8 @@ void opcao5() //APRESENTAR MEDIA DE DESPESAS
 	cout << "Media de despesas:" << media / cont<<"\n";
 	system("pause");
 }
-void opcao6() //APRESENTAR MEDIA DE RECEITAS
+
+void opcao6()
 {
 	int i;
 	float media = 0;
@@ -183,7 +135,8 @@ void opcao6() //APRESENTAR MEDIA DE RECEITAS
 	cout << "Media de receitas:" << media / cont << "\n";
 	system("pause");
 }
-void opcao7() //APRESENTAR SALDO ACTUAL
+
+void opcao7()
 {
 		int i;
 		float total_d = 0;
@@ -206,7 +159,8 @@ void opcao7() //APRESENTAR SALDO ACTUAL
 		cout << "Saldo: " << total_r - total_d << "\n";
 		system("pause");
 }
-void opcao8() //DESPESAS POR DATA
+
+void opcao8()
 {
 	int ano_procurar;
 	int mes_procurar;
@@ -237,7 +191,8 @@ void opcao8() //DESPESAS POR DATA
 	}
 	system("pause");
 }
-void opcao9() //RECEITAS POR DATA
+
+void opcao9()
 {
 	int ano_procurar;
 	int mes_procurar;
@@ -268,7 +223,8 @@ void opcao9() //RECEITAS POR DATA
 	}
 	system("pause");
 }
-void opcao10() //DESPESAS ACIMA DE:
+
+void opcao10()
 {
 	int valor_a_procurar;
 	cout << "\nPretende procurar despesas acima de: ";
@@ -284,7 +240,8 @@ void opcao10() //DESPESAS ACIMA DE:
 	}
 	system("pause");
 }
-void opcao11()  //RECEITAS ACIMA DE:
+
+void opcao11()
 {
 	int valor_a_procurar;
 	cout << "\nPretende procurar receitas acima de: ";
